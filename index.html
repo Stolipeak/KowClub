@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="KOW - Restaurant cambodgien à Paris. Découvrez notre cuisine authentique et moderne dans une ambiance cyberpunk unique.">
+    <title>KOW | Street Food Cambodgienne</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --neon-pink: #ff00ff;
+            --neon-blue: #00ffff;
+            --dark-bg: #0a0a0f;
+            --cyber-gradient: linear-gradient(45deg, var(--neon-pink), var(--neon-blue));
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 2px solid var(--neon-pink);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }        .logo {
+            font-size: 2rem;
+            background: var(--cyber-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--neon-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: url('https://images.unsplash.com/photo-1552531268-3fe8c3fc8d84?w=1600') center/cover;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: var(--cyber-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Menu Section */
+        .menu {
+            padding: 100px 0;
+            background: var(--dark-bg);
+        }
+
+        .menu-preview {
+            padding: 100px 0;
+            background: var(--dark-bg);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--neon-blue);
+            transition: 0.3s;
+        }
+
+        .item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px var(--neon-blue);
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: linear-gradient(to bottom, var(--dark-bg), #150515);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: #150515;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--neon-pink);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            padding: 50px 0;
+            border-top: 2px solid var(--neon-blue);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Utility Classes */        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            background: var(--cyber-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--cyber-gradient);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--neon-pink);
+        }
+
+        .btn-secondary {
+            background: var(--neon-blue);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px var(--neon-pink);
+        }
+
+        /* Burger Menu */
+        .burger-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .burger-line {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+
+        /* Language Selector */
+        .lang-selector {
+            position: relative;
+            display: inline-block;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .lang-options {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(10, 10, 15, 0.95);
+            border: 1px solid var(--neon-pink);
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        .lang-option {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .lang-option:hover {
+            background: var(--neon-pink);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 10, 15, 0.95);
+                border-top: 2px solid var(--neon-pink);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .burger-menu {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo">KOW</a>
+            <nav>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="menu-fr.html">Menu</a></li>
+                    <li><a href="#about">À Propos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>            <div class="lang-selector">
+                <button class="lang-btn">
+                    <span>FR</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>                <div class="lang-options">
+                    <a href="index.html" class="lang-option">Français</a>
+                    <a href="index-en.html" class="lang-option">English</a>
+                    <a href="index-kh.html" class="lang-option">ភាសាខ្មែរ</a>
+                </div>
+            </div>
+            <div class="burger-menu">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="container hero-content">
+            <h1>KOW</h1>
+            <p>Street Food Cambodgienne à Paris</p>
+            <div class="hero-buttons">
+                <a href="menu-fr.html" class="btn btn-primary">Découvrir notre menu</a>
+                <a href="#about" class="btn btn-secondary">En savoir plus</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu-preview" class="menu-preview">
+        <div class="container">
+            <h2 class="section-title">Nos Spécialités</h2>
+            <div class="menu-grid">
+                <div class="item">
+                    <h3><span class="title">Amok Trey</span><span class="price">13,90 €</span></h3>
+                    <p>Poisson pané au curry rouge et lait de coco, poivrons rouges et taro frit.</p>
+                </div>
+                <div class="item">
+                    <h3><span class="title">Lok Lak</span><span class="price">13,90 €</span></h3>
+                    <p>Morceaux de bœuf marinés sautés.</p>
+                </div>
+                <div class="item">
+                    <h3><span class="title">Phaem Brai</span><span class="price">13,90 €</span></h3>
+                    <p>Boulettes de poulet caramélisées aux épices et herbes.</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="menu-fr.html" class="btn btn-primary">Voir le menu complet</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">À Propos de KOW</h2>
+            <div class="about-content">
+                <p>KOW vous invite à découvrir la street food cambodgienne authentique dans une ambiance cyberpunk unique. Notre chef, formé à Phnom Penh, réinvente les saveurs traditionnelles tout en respectant l'authenticité des recettes ancestrales.</p>
+                <p>Dans notre restaurant, nous fusionnons l'héritage culinaire du Cambodge avec une expérience moderne et immersive, créant un voyage gastronomique inoubliable au cœur de Paris.</p>
+            </div>
+        </div>
+    </section>    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Informations Pratiques</h2>
+            <div class="info-grid">                <div class="info-card">
+                    <h3><i class="fas fa-clock"></i> Horaires</h3>
+                    <p>Du lundi au samedi<br>12h - 15h et 18h - 23h</p>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> Adresse</h3>
+                    <p>53 rue Basfroi<br>75011 Paris</p>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-phone"></i> Contact</h3>
+                    <p>01 45 32 44 01</p>
+                    <a href="https://instagram.com/kowclub" class="social-link" target="_blank">
+                        <i class="fab fa-instagram"></i> @kowclub
+                    </a>
+                </div>
+            </div>            <h2 class="section-title">Nous Contacter</h2>
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="subject">Type de demande</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Sélectionner</option>
+                        <option value="reservation">Réservation</option>
+                        <option value="event">Organiser un événement</option>
+                        <option value="info">Demande d'information</option>
+                        <option value="other">Autre demande</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="firstname">Prénom</label>
+                    <input type="text" id="firstname" name="firstname" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Téléphone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date souhaitée</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Heure souhaitée</label>                    <select id="time" name="time" required>
+                        <option value="">Choisir une heure</option>                        <option value="12:00">12:00</option>
+                        <option value="12:30">12:30</option>
+                        <option value="13:00">13:00</option>
+                        <option value="13:30">13:30</option>
+                        <option value="14:00">14:00</option>
+                        <option value="14:30">14:30</option>
+                        <option value="18:00">18:00</option>
+                        <option value="18:30">18:30</option>
+                        <option value="19:00">19:00</option>
+                        <option value="19:30">19:30</option>
+                        <option value="20:00">20:00</option>
+                        <option value="20:30">20:30</option>
+                        <option value="21:00">21:00</option>
+                        <option value="21:30">21:30</option>
+                        <option value="22:00">22:00</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Nombre de personnes</label>
+                    <select id="guests" name="guests" required>
+                        <option value="">Sélectionner</option>
+                        <option value="1">1 personne</option>
+                        <option value="2">2 personnes</option>
+                        <option value="3">3 personnes</option>
+                        <option value="4">4 personnes</option>
+                        <option value="5">5 personnes</option>
+                        <option value="6">6 personnes</option>
+                        <option value="more">Plus de 6 personnes</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message (optionnel)</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <div class="form-submit">
+                    <button type="submit">Réserver</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-column">
+                <h4>Heures d'ouverture</h4>
+                <p>Du lundi au samedi<br>12h - 15h et 18h - 23h</p>
+            </div>
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <p>01 45 32 44 01</p>
+                <a class="footer-insta" href="https://instagram.com/kowclub" target="_blank">
+                    <i class="fab fa-instagram"></i> @kowclub
+                </a>
+            </div>
+            <div class="footer-column">
+                <h4>Adresse</h4>
+                <p>53 rue Basfroi<br>75011 Paris</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://deliveroo.fr/fr/menu/Paris/11eme-bastille/kow-cambodian-foodstall" class="deliveroo-badge" target="_blank" aria-label="Commander sur Deliveroo">
+        <img src="https://img.icons8.com/?size=100&id=H9NlpM5iwJuH&format=png&color=000000" alt="Deliveroo">
+    </a>
+
+    <script>
+        // Mobile menu
+        const burgerMenu = document.querySelector('.burger-menu');
+        const nav = document.querySelector('nav ul');
+
+        burgerMenu.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            burgerMenu.classList.toggle('active');
+        });
+
+        // Language selector
+        const langBtn = document.querySelector('.lang-btn');
+        const langOptions = document.querySelector('.lang-options');
+
+        langBtn.addEventListener('click', () => {
+            langOptions.classList.toggle('active');
+        });
+
+        // Close language selector when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!langBtn.contains(e.target)) {
+                langOptions.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

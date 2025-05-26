@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="KOW - Cambodian restaurant in Paris. Discover our authentic and modern cuisine in a unique cyberpunk atmosphere.">
+    <title>KOW | Cambodian Street Food</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="index-en.html" class="logo">KOW</a>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="menu-en.html">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>            <div class="lang-selector">
+                <button class="lang-btn">
+                    <span>EN</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>                <div class="lang-options">
+                    <a href="index.html" class="lang-option">Français</a>
+                    <a href="index-en.html" class="lang-option">English</a>
+                    <a href="index-kh.html" class="lang-option">ភាសាខ្មែរ</a>
+                </div>
+            </div>
+            <div class="burger-menu">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1>KOW</h1>
+            <p>Cambodian Street Food in Paris</p>
+            <div class="hero-buttons">
+                <a href="menu-en.html" class="btn btn-primary">Discover our menu</a>
+                <a href="#about" class="btn btn-secondary">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu-preview" class="menu-preview">
+        <div class="container">
+            <h2 class="section-title">Our Specialties</h2>
+            <div class="menu-grid">
+                <div class="item">
+                    <h3><span class="title">Amok Trey</span><span class="price">13.90 €</span></h3>
+                    <p>Fish in red curry and coconut milk, red peppers and fried taro.</p>
+                </div>
+                <div class="item">
+                    <h3><span class="title">Lok Lak</span><span class="price">13.90 €</span></h3>
+                    <p>Marinated sautéed beef pieces.</p>
+                </div>
+                <div class="item">
+                    <h3><span class="title">Phaem Brai</span><span class="price">13.90 €</span></h3>
+                    <p>Caramelized chicken meatballs with spices and herbs.</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="menu-en.html" class="btn btn-primary">See full menu</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About KOW</h2>
+            <div class="about-content">
+                <p>KOW invites you to discover authentic Cambodian street food in a unique cyberpunk atmosphere. Our chef, trained in Phnom Penh, reinvents traditional flavors while respecting the authenticity of ancestral recipes.</p>
+                <p>In our restaurant, we merge Cambodia's culinary heritage with a modern and immersive experience, creating an unforgettable gastronomic journey in the heart of Paris.</p>
+            </div>
+        </div>
+    </section>    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Practical Information</h2>
+            <div class="info-grid">
+                <div class="info-card">                    <h3><i class="fas fa-clock"></i> Opening Hours</h3>
+                    <p>Monday to Saturday<br>12 PM - 3 PM and 6 PM - 11 PM</p>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-map-marker-alt"></i> Address</h3>
+                    <p>53 rue Basfroi<br>75011 Paris</p>
+                </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-phone"></i> Contact</h3>
+                    <p>+33 1 45 32 44 01</p>
+                    <a href="https://instagram.com/kowclub" class="social-link" target="_blank">
+                        <i class="fab fa-instagram"></i> @kowclub
+                    </a>
+                </div>
+            </div>            <h2 class="section-title">Contact Us</h2>
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="subject">Request Type</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select</option>
+                        <option value="reservation">Table Reservation</option>
+                        <option value="event">Event Organization</option>
+                        <option value="info">Information Request</option>
+                        <option value="other">Other Request</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="name">Last Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Preferred Time</label>                    <select id="time" name="time" required>
+                        <option value="">Choose a time</option>                        <option value="12:00">12:00 PM</option>
+                        <option value="12:30">12:30 PM</option>
+                        <option value="1:00">1:00 PM</option>
+                        <option value="1:30">1:30 PM</option>
+                        <option value="2:00">2:00 PM</option>
+                        <option value="2:30">2:30 PM</option>
+                        <option value="18:00">6:00 PM</option>
+                        <option value="18:30">6:30 PM</option>
+                        <option value="19:00">7:00 PM</option>
+                        <option value="19:30">7:30 PM</option>
+                        <option value="20:00">8:00 PM</option>
+                        <option value="20:30">8:30 PM</option>
+                        <option value="21:00">9:00 PM</option>
+                        <option value="21:30">9:30 PM</option>
+                        <option value="22:00">10:00 PM</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Number of Guests</label>
+                    <select id="guests" name="guests" required>
+                        <option value="">Select</option>
+                        <option value="1">1 person</option>
+                        <option value="2">2 people</option>
+                        <option value="3">3 people</option>
+                        <option value="4">4 people</option>
+                        <option value="5">5 people</option>
+                        <option value="6">6 people</option>
+                        <option value="more">More than 6 people</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message (optional)</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <div class="form-submit">
+                    <button type="submit">Reserve</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-column">
+                <h4>Opening Hours</h4>
+                <p>Monday to Saturday<br>12 PM - 3 PM and 6 PM - 11 PM</p>
+            </div>
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <p>+33 1 45 32 44 01</p>
+                <a class="footer-insta" href="https://instagram.com/kowclub" target="_blank">
+                    <i class="fab fa-instagram"></i> @kowclub
+                </a>
+            </div>
+            <div class="footer-column">
+                <h4>Address</h4>
+                <p>53 rue Basfroi<br>75011 Paris</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://deliveroo.fr/fr/menu/Paris/11eme-bastille/kow-cambodian-foodstall" class="deliveroo-badge" target="_blank" aria-label="Order on Deliveroo">
+        <img src="https://img.icons8.com/?size=100&id=H9NlpM5iwJuH&format=png&color=000000" alt="Deliveroo">
+    </a>
+
+    <script>
+        // Mobile menu
+        const burgerMenu = document.querySelector('.burger-menu');
+        const nav = document.querySelector('nav ul');
+
+        burgerMenu.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            burgerMenu.classList.toggle('active');
+        });
+
+        // Language selector
+        const langBtn = document.querySelector('.lang-btn');
+        const langOptions = document.querySelector('.lang-options');
+
+        langBtn.addEventListener('click', () => {
+            langOptions.classList.toggle('active');
+        });
+
+        // Close language selector when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!langBtn.contains(e.target)) {
+                langOptions.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
