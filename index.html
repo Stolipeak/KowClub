@@ -6,310 +6,14 @@
     <meta name="description" content="KOW - Restaurant cambodgien à Paris. Découvrez notre cuisine authentique et moderne dans une ambiance cyberpunk unique.">
     <title>KOW | Street Food Cambodgienne</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        :root {
-            --neon-pink: #ff00ff;
-            --neon-blue: #00ffff;
-            --dark-bg: #0a0a0f;
-            --cyber-gradient: linear-gradient(45deg, var(--neon-pink), var(--neon-blue));
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        body {
-            background-color: var(--dark-bg);
-            color: white;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: rgba(10, 10, 15, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 2px solid var(--neon-pink);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }        .logo {
-            font-size: 2rem;
-            background: var(--cyber-gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            position: relative;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--neon-blue);
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: url('https://images.unsplash.com/photo-1552531268-3fe8c3fc8d84?w=1600') center/cover;
-            position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            background: var(--cyber-gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        /* Menu Section */
-        .menu {
-            padding: 100px 0;
-            background: var(--dark-bg);
-        }
-
-        .menu-preview {
-            padding: 100px 0;
-            background: var(--dark-bg);
-        }
-
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .item {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            border-radius: 10px;
-            border: 1px solid var(--neon-blue);
-            transition: 0.3s;
-        }
-
-        .item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 20px var(--neon-blue);
-        }
-
-        /* About Section */
-        .about {
-            padding: 100px 0;
-            background: linear-gradient(to bottom, var(--dark-bg), #150515);
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 100px 0;
-            background: #150515;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .info-card {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            border-radius: 10px;
-            border: 1px solid var(--neon-pink);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark-bg);
-            padding: 50px 0;
-            border-top: 2px solid var(--neon-blue);
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        /* Utility Classes */        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-align: center;
-            background: var(--cyber-gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            background: var(--cyber-gradient);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        .btn-primary {
-            background: var(--neon-pink);
-        }
-
-        .btn-secondary {
-            background: var(--neon-blue);
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 20px var(--neon-pink);
-        }
-
-        /* Burger Menu */
-        .burger-menu {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .burger-line {
-            width: 25px;
-            height: 3px;
-            background: white;
-            margin: 4px 0;
-            transition: 0.3s;
-        }
-
-        /* Language Selector */
-        .lang-selector {
-            position: relative;
-            display: inline-block;
-        }
-
-        .lang-btn {
-            background: transparent;
-            border: none;
-            color: white;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        .lang-options {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: rgba(10, 10, 15, 0.95);
-            border: 1px solid var(--neon-pink);
-            border-radius: 5px;
-            z-index: 1000;
-        }
-
-        .lang-option {
-            display: block;
-            padding: 0.5rem 1rem;
-            color: white;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .lang-option:hover {
-            background: var(--neon-pink);
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: rgba(10, 10, 15, 0.95);
-                border-top: 2px solid var(--neon-pink);
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .burger-menu {
-                display: flex;
-            }
-
-            .hero h1 {
-                font-size: 3rem;
-            }
-
-            .hero p {
-                font-size: 1.2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .btn {
-                padding: 0.8rem 1.5rem;
-                font-size: 0.9rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="header-inner">
-            <a href="index.html" class="logo">KOW</a>
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="KOW Logo" width="50" height="50">
+            </a>
             <nav>
                 <ul>
                     <li><a href="#accueil">Accueil</a></li>
@@ -337,8 +41,8 @@
 
     <section id="accueil" class="hero">
         <div class="container hero-content">
-            <h1>KOW</h1>
-            <p>Street Food Cambodgienne à Paris</p>
+            <h2 class="section-title">Le meilleur de la  Streetfood cambodgienne</h2>
+            <p>Tout simplement.</p>
             <div class="hero-buttons">
                 <a href="menu-fr.html" class="btn btn-primary">Découvrir notre menu</a>
                 <a href="#about" class="btn btn-secondary">En savoir plus</a>
@@ -401,7 +105,7 @@
                     <label for="subject">Type de demande</label>
                     <select id="subject" name="subject" required>
                         <option value="">Sélectionner</option>
-                        <option value="reservation">Réservation</option>
+                        <option value="reservation">Réservation simple</option>
                         <option value="event">Organiser un événement</option>
                         <option value="info">Demande d'information</option>
                         <option value="other">Autre demande</option>
@@ -422,33 +126,19 @@
                 <div class="form-group">
                     <label for="phone">Téléphone</label>
                     <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
+                </div>                <div class="form-group reservation-field" style="display: none;">
                     <label for="date">Date souhaitée</label>
-                    <input type="date" id="date" name="date" required>
+                    <input type="date" id="date" name="date">
                 </div>
-                <div class="form-group">
-                    <label for="time">Heure souhaitée</label>                    <select id="time" name="time" required>
-                        <option value="">Choisir une heure</option>                        <option value="12:00">12:00</option>
-                        <option value="12:30">12:30</option>
-                        <option value="13:00">13:00</option>
-                        <option value="13:30">13:30</option>
-                        <option value="14:00">14:00</option>
-                        <option value="14:30">14:30</option>
-                        <option value="18:00">18:00</option>
-                        <option value="18:30">18:30</option>
-                        <option value="19:00">19:00</option>
-                        <option value="19:30">19:30</option>
-                        <option value="20:00">20:00</option>
-                        <option value="20:30">20:30</option>
-                        <option value="21:00">21:00</option>
-                        <option value="21:30">21:30</option>
-                        <option value="22:00">22:00</option>
+                <div class="form-group reservation-field" style="display: none;">
+                    <label for="time">Heure souhaitée</label>
+                    <select id="time" name="time">
+                        <option value="">Choisir une heure</option>
                     </select>
                 </div>
-                <div class="form-group">
+                <div class="form-group reservation-field" style="display: none;">
                     <label for="guests">Nombre de personnes</label>
-                    <select id="guests" name="guests" required>
+                    <select id="guests" name="guests">
                         <option value="">Sélectionner</option>
                         <option value="1">1 personne</option>
                         <option value="2">2 personnes</option>
@@ -474,7 +164,7 @@
         <div class="footer-inner">
             <div class="footer-column">
                 <h4>Heures d'ouverture</h4>
-                <p>Du lundi au samedi<br>12h - 15h et 18h - 23h</p>
+                <p>Du lundi au samedi<br>12h - 15h et 19h - 23h</p>
             </div>
             <div class="footer-column">
                 <h4>Contact</h4>
@@ -492,9 +182,7 @@
 
     <a href="https://deliveroo.fr/fr/menu/Paris/11eme-bastille/kow-cambodian-foodstall" class="deliveroo-badge" target="_blank" aria-label="Commander sur Deliveroo">
         <img src="https://img.icons8.com/?size=100&id=H9NlpM5iwJuH&format=png&color=000000" alt="Deliveroo">
-    </a>
-
-    <script>
+    </a>    <script>
         // Mobile menu
         const burgerMenu = document.querySelector('.burger-menu');
         const nav = document.querySelector('nav ul');
@@ -517,7 +205,55 @@
             if (!langBtn.contains(e.target)) {
                 langOptions.classList.remove('active');
             }
+        });        // Gestion du formulaire de réservation
+        const subjectSelect = document.getElementById('subject');
+        const reservationFields = document.querySelectorAll('.reservation-field');
+        const dateInput = document.getElementById('date');
+        const timeInput = document.getElementById('time');
+        const guestsInput = document.getElementById('guests');
+
+        subjectSelect.addEventListener('change', function() {
+            const isReservation = this.value === 'reservation' || this.value === 'event';
+            
+            reservationFields.forEach(field => {
+                field.style.display = isReservation ? 'block' : 'none';
+                const inputs = field.querySelectorAll('input, select');
+                inputs.forEach(input => {
+                    input.required = isReservation;
+                });
+            });
+
+            // Ajuster les options d'heures selon le type de demande
+            if (timeInput) {
+                timeInput.innerHTML = ''; // Vider les options existantes
+                if (this.value === 'event') {
+                    // Options pour les événements (créneaux de 30 minutes)
+                    for (let hour = 11; hour <= 22; hour++) {
+                        for (let min of ['00', '30']) {
+                            const time = `${hour}:${min}`;
+                            const option = new Option(time, time);
+                            timeInput.add(option);
+                        }
+                    }
+                } else {
+                    // Options standard pour les réservations
+                    const lunchHours = ['12:00', '12:30', '13:00', '13:30', '14:00'];
+                    const dinnerHours = ['19:00', '19:30', '20:00', '20:30', '21:00', '21:30', '22:00'];
+                    const option = new Option('Choisir une heure', '');
+                    timeInput.add(option);
+                    [...lunchHours, ...dinnerHours].forEach(time => {
+                        const option = new Option(time, time);
+                        timeInput.add(option);
+                    });
+                }
+            }
         });
+
+        // Définir la date minimale à aujourd'hui
+        const today = new Date().toISOString().split('T')[0];
+        if (dateInput) {
+            dateInput.min = today;
+        }
     </script>
 </body>
 </html>

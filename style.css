@@ -78,14 +78,33 @@ header {
 }
 
 .logo {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2rem;
-    background: var(--cyber-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     text-decoration: none;
-    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    filter: drop-shadow(0 0 5px var(--neon-blue))
+           drop-shadow(0 0 10px var(--neon-pink))
+           drop-shadow(0 0 15px var(--neon-purple));
+    animation: logoGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes logoGlow {
+    from {
+        filter: drop-shadow(0 0 5px var(--neon-blue))
+               drop-shadow(0 0 10px var(--neon-pink))
+               drop-shadow(0 0 15px var(--neon-purple));
+    }
+    to {
+        filter: drop-shadow(0 0 8px var(--neon-blue))
+               drop-shadow(0 0 16px var(--neon-pink))
+               drop-shadow(0 0 24px var(--neon-purple));
+    }
 }
 
 /* Navigation */
@@ -647,6 +666,51 @@ html[lang="km"] .form-group select {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* Section Titles */
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: transparent;
+    background: var(--cyber-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: var(--cyber-gradient);
+    box-shadow: 0 0 10px var(--neon-blue),
+                0 0 20px var(--neon-pink);
+}
+
+/* Animation spéciale pour les titres de section */
+.section-title {
+    animation: glowText 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+    from {
+        text-shadow: 0 0 5px rgba(0, 255, 255, 0.5),
+                     0 0 10px rgba(255, 0, 255, 0.3);
+    }
+    to {
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.8),
+                     0 0 20px rgba(255, 0, 255, 0.5);
+    }
 }
 
 /* Responsive Design */
