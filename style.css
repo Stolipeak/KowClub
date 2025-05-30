@@ -443,7 +443,7 @@ html[lang="km"] {
 
 .hero h1 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 5rem;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
     background: var(--cyber-gradient);
     -webkit-background-clip: text;
@@ -671,7 +671,7 @@ html[lang="km"] .form-group select {
 /* Section Titles */
 .section-title {
     font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 3rem;
     color: transparent;
@@ -794,30 +794,34 @@ html[lang="km"] .form-group select {
         text-align: center;
         gap: 2rem;
     }
+
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
     /* Fine-tuning for small screens */
     .section-title {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    .hero-content h1 {
         font-size: 2rem;
     }
 
-    .item h3 {
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
+    .info-card h3 {
+        font-size: 1.2rem;
     }
 
-    .price {
-        margin-top: 0.5rem;
+    .footer h4 {
+        font-size: 1.1rem;
     }
 
-    .form-group {
-        margin-bottom: 1.5rem;
-    }
-
-    input, select, textarea {
-        font-size: 16px; /* Prevent zoom on mobile */
+    .item h3 .title {
+        font-size: 1.1rem;
     }
 }
 
