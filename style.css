@@ -661,6 +661,27 @@ html[lang="km"] .form-group select {
     box-shadow: 0 0 20px var(--neon-pink);
 }
 
+/* Messages de formulaire */
+.form-message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.form-message.success {
+    background-color: rgba(0, 255, 0, 0.1);
+    color: #00ff00;
+    border: 1px solid #00ff00;
+}
+
+.form-message.error {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #ff0000;
+    border: 1px solid #ff0000;
+}
+
 /* Container */
 .container {
     max-width: 1200px;
