@@ -734,6 +734,64 @@ html[lang="km"] .form-group select {
     }
 }
 
+/* FAQ Section */
+.faq {
+    padding: 4rem 0;
+    background: var(--bg-color);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.faq-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.faq-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.faq-item p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Khmer text specific styling */
+.faq-item:lang(km) h3 {
+    font-family: 'Hanuman', serif;
+    line-height: 1.8;
+}
+
+.faq-item:lang(km) p {
+    font-family: 'Hanuman', serif;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .faq-item {
+        padding: 1rem;
+    }
+}
+
 /* Responsive Design */
 @media screen and (max-width: 1200px) {
     .container {
