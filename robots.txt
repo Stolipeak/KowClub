@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /process-form.php
+
+# Sitemaps
+Sitemap: https://www.kowclub.fr/sitemap.xml

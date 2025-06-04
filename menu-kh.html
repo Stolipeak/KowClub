@@ -2,11 +2,46 @@
 <html lang="km">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="មុខម្ហូបនៅភោជនីយដ្ឋាន KOW - រកឃើញម្ហូបកម្ពុជាពិសេសរបស់យើង គ្រឿងស្រវឹង និងភេសជ្ជៈ។ អាហារតាមចិញ្ចើមផ្លូវប្រពៃណីនិងទំនើបនៅចំកណ្តាលទីក្រុងប៉ារីស។">
-    <title>មុខម្ហូប - KOW | អាហារតាមចិញ្ចើមផ្លូវកម្ពុជា</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500&family=Hanuman:wght@300;400;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#0a0a0f">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <!-- Preload des ressources critiques -->
+    <link rel="preload" href="images/logo.png" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500&family=Hanuman:wght@300;400;700&display=swap" as="style">
+    <link rel="preload" href="style.css" as="style">
+    
+    <meta name="description" content="មុខម្ហូបនៅភោជនីយដ្ឋាន KOW - រកឃើញម្ហូបកម្ពុជាពិសេសរបស់យើង គ្រឿងស្រវឹង និងភេសជ្ជៈ។ អាហារហាឡាល់ និងបន្លែ។ អាហារតាមចិញ្ចើមផ្លូវប្រពៃណីនិងទំនើបនៅចំកណ្តាលទីក្រុងប៉ារីស។">
+    <meta name="keywords" content="មុខម្ហូបកម្ពុជា, ភោជនីយដ្ឋានកម្ពុជាប៉ារីស, ម្ហូបកម្ពុជា, street food, ហាឡាល់, បន្លែ">
+    <meta name="author" content="KOW Club">
+    <title>មុខម្ហូប KOW | អាហារតាមចិញ្ចើមផ្លូវកម្ពុជា | ភោជនីយដ្ឋានហាឡាល់</title>
+    <link rel="canonical" href="https://www.kowclub.fr/menu-kh.html">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500&family=Hanuman:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Menu",
+      "name": "មុខម្ហូប KOW Club",
+      "url": "https://www.kowclub.fr/menu-kh.html",
+      "mainEntityOfPage": {
+        "@type": "Restaurant",
+        "name": "KOW Club",
+        "servesCuisine": ["ខ្មែរ", "Street Food", "ហាឡាល់", "បន្លែ"],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "53 rue Basfroi",
+          "addressLocality": "Paris",
+          "postalCode": "75011",
+          "addressCountry": "FR"
+        }
+      }
+    }
+    </script>
 </head>
 <body>
     <header>
@@ -47,8 +82,10 @@
 
         <section class="section">
             <h2>ស្រាបៀររបស់យើង</h2>
-            <div class="item">                <img src="images/Bière Angkor.png" alt="ស្រាបៀរអង្គរ" width="300" height="200">
-                <h3><span class="title">ស្រាបៀរអង្គរ</span><span class="price">4,5 €</span></h3>
+            <div class="item">                <img src="images/Bière Angkor.png" alt="ស្រាបៀរអង្គរ" width="300" height="200">                <h3>
+                    <span class="title">ស្រាបៀរអង្គរ</span>
+                    <span class="price">4,5 €</span>
+                </h3>
                 <p>ស្រាបៀរកម្ពុជាដ៏ល្បីល្បាញ។</p>
             </div>
             <div class="item">
@@ -141,12 +178,12 @@
             <h2>មុខម្ហូបខ្មែរ</h2>
             <p style="text-align: center; color: var(--neon-pink); margin-bottom: 2rem;">គ្រប់មុខម្ហូបតម្លៃ 13,90 €</p>
             <div class="item">
-                <img src="images/Amok Trey.png" alt="អាម៉ុកត្រី" width="300" height="200">
+                <img src="images/Amok Trey.png" alt="អាម៉ុកត្រី - ត្រីអាំងក្នុងការីក្រហម និងទឹកដូង" width="300" height="200">
                 <h3><span class="title">អាម៉ុកត្រី</span></h3>
                 <p>ត្រីសាច់ស្រួយក្នុងការីក្រហម និងទឹកដូង ម្រេចក្រហម និងតារ៉ូចៀន។</p>
             </div>
             <div class="item">
-                <img src="images/Lok Lak.png" alt="ឡុកឡាក់" width="300" height="200">
+                <img src="images/Lok Lak.png" alt="ឡុកឡាក់ - សាច់គោចំណិតក្រឡុកតាមបែបខ្មែរ" width="300" height="200">
                 <h3><span class="title">ឡុកឡាក់</span></h3>
                 <p>សាច់គោចៀនជាមួយស្លឹកគ្រៃ។</p>
             </div>
@@ -244,5 +281,6 @@
             }
         });
     </script>
+    <script defer src="js/image-loading.js"></script>
 </body>
 </html>

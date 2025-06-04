@@ -1,18 +1,79 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="KOW - Restaurant cambodgien à Paris. Découvrez notre cuisine authentique et moderne dans une ambiance cyberpunk unique.">
-    <title>KOW | Street Food Cambodgienne</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#0a0a0f">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" as="style">
+    <link rel="preload" href="images/logo.png" as="image">
+    <meta name="description" content="KOW - Restaurant cambodgien à Paris. Découvrez notre cuisine authentique, halal et moderne dans une ambiance cyberpunk unique.">
+    <meta name="keywords" content="restaurant cambodgien, street food, Paris, cuisine asiatique, cyberpunk, halal, végétarien, livraison, événement, réservation">
+    <meta name="author" content="KOW Club">
+    
+    <!-- Language alternates -->
+    <link rel="alternate" hreflang="en" href="https://www.kowclub.fr/index-en.html">
+    <link rel="alternate" hreflang="km" href="https://www.kowclub.fr/index-kh.html">
+    <link rel="alternate" hreflang="fr" href="https://www.kowclub.fr/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.kowclub.fr/index.html">
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:title" content="KOW | Street Food Cambodgienne à Paris | Restaurant Cambodgien Halal">
+    <meta property="og:description" content="KOW - Restaurant cambodgien à Paris. Découvrez notre cuisine authentique, halal et moderne dans une ambiance cyberpunk unique.">
+    <meta property="og:image" content="https://www.kowclub.fr/images/logo.png">
+    <meta property="og:url" content="https://www.kowclub.fr/">
+    <meta property="og:type" content="restaurant">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="KOW Club">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KOW | Street Food Cambodgienne à Paris">
+    <meta name="twitter:description" content="Restaurant cambodgien authentique et halal à Paris">
+    <meta name="twitter:image" content="https://www.kowclub.fr/images/logo.png">
+    
+    <title>KOW | Street Food Cambodgienne à Paris | Restaurant Cambodgien Halal</title>
+    <link rel="canonical" href="https://www.kowclub.fr/">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Données structurées Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "KOW",
+      "image": "https://www.kowclub.fr/images/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "53 rue Basfroi",
+        "addressLocality": "Paris",
+        "postalCode": "75011",
+        "addressCountry": "FR"
+      },
+      "telephone": "+33145324401",
+      "servesCuisine": ["Cambodgienne", "Street Food", "Halal", "Végétarien"],
+      "url": "https://www.kowclub.fr/",
+      "priceRange": "€€",
+      "openingHours": [
+        "Mo-Sa 12:00-15:00",
+        "Mo-Sa 19:00-23:00"
+      ],
+      "sameAs": [
+        "https://instagram.com/kowclub",
+        "https://deliveroo.fr/fr/menu/Paris/11eme-bastille/kow-cambodian-foodstall"
+      ]
+    }
+    </script>
 </head>
 <body>
     <header>
         <div class="header-inner">
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="KOW Logo" width="50" height="50">
+                <img src="images/logo.png" alt="KOW Restaurant Cambodgien Paris - Logo" width="200" height="300">
             </a>
             <nav>
                 <ul>
@@ -53,29 +114,16 @@
             <h2 class="section-title">Nos Spécialités</h2>
             <div class="menu-grid">
                 <div class="item">
-                    <img src="images/amok-trey.jpg" alt="Amok Trey">
                     <h3><span class="title">Amok Trey</span><span class="price">13,90 €</span></h3>
                     <p>Poisson pané au curry rouge et lait de coco, poivrons rouges et taro frit.</p>
                 </div>
                 <div class="item">
-                    <img src="images/lok-lak.jpg" alt="Lok Lak">
                     <h3><span class="title">Lok Lak</span><span class="price">13,90 €</span></h3>
                     <p>Morceaux de bœuf marinés sautés.</p>
                 </div>
                 <div class="item">
-                    <img src="images/phaem-brai.jpg" alt="Phaem Brai">
                     <h3><span class="title">Phaem Brai</span><span class="price">13,90 €</span></h3>
                     <p>Boulettes de poulet caramélisées aux épices et herbes.</p>
-                </div>
-                <div class="item">
-                    <img src="images/beignet-chek.jpg" alt="Beignet Chek">
-                    <h3><span class="title">Beignet Chek</span><span class="price">6,90 €</span></h3>
-                    <p>Beignets de banane frits, croustillants et sucrés.</p>
-                </div>
-                <div class="item">
-                    <img src="images/buddha-bowl.jpg" alt="Buddha Bowl">
-                    <h3><span class="title">Buddha Bowl</span><span class="price">12,90 €</span></h3>
-                    <p>Bol végétarien avec légumes frais, riz et sauce maison.</p>
                 </div>
             </div>
             <div class="text-center">
